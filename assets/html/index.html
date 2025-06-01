@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM Chat Frontend</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+  <div id="login-container">
+    <input id="user-id-input" placeholder="Enter your user ID" />
+    <button id="login-btn">Login</button>
+  </div>
+  <div id="main-container">
+    <div id="sidebar">
+      <button id="theme-toggle" class="icon-btn" title="Toggle theme">🌓</button>
+      <h3>Your Chats</h3>
+      <ul id="thread-list"></ul>
+      <button id="new-thread-btn">+ New Chat</button>
+    </div>
+    <div id="chat-container" style="display:none;">
+      <div id="chat-log"></div>
+      <form id="controls">
+        <input id="message-input" autocomplete="off" placeholder="Type your message..." />
+        <button type="submit" title="Send">➤</button>
+        <label for="image-upload" title="Send image" class="icon-btn">🖼️</label>
+        <input type="file" id="image-upload" accept="image/*" />
+        <button type="button" id="voice-btn" class="icon-btn" title="Voice">🎤</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../js/chat.js"></script>
+</body>
+
+</html>
